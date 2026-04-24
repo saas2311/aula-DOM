@@ -51,7 +51,7 @@ function atualizarInterfaceCarrinho() {
   itensCarrinhoHtml.innerHTML = "";
   carrinho.forEach((item, index) => {
     const li = document.createElement("li");
-    li.innerHTML = `${item.titulo} - R$ ${item.preco.toFixed(2)}`;
+    li.innerHTML = `${item.titulo} - R$ ${item.preco.toFixed(2)}  <span style="color:red; margin-left:10px;">(remover)</span>`;
     li.onclick = () => removerItem(index);
     itensCarrinhoHtml.appendChild(li);
   });
