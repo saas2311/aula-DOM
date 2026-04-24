@@ -1,0 +1,66 @@
+body{
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0f0f0;
+}
+
+main{
+  gap: 50px;
+  margin-top: 20px;
+}
+
+#lista-livros{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.livro{
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#carrinho{
+  background: white;
+  padding: 15px;
+  border: 2px solid #333;
+  min-width: 200px;
+}
+
+#itens-carrinho li {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+#itens-carrinho li:hover {
+  background-color: #fff0f0;
+}
+
+button{
+  cursor: pointer;
+  background: #28a750;
+  color:  white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button:hover{
+  background: #218838;
+}
+
+#btn-limpar {
+  background: #dc3545;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#btn-limpar:hover {
+  background: #c82333;
+}
