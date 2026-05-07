@@ -49,12 +49,26 @@ function esvaziarCarrinho() {
 
 function atualizarInterfaceCarrinho() {
   itensCarrinhoHtml.innerHTML = "";
+
   carrinho.forEach((item, index) => {
+
     const li = document.createElement("li");
-    li.innerHTML = `${item.titulo} - R$ ${item.preco.toFixed(2)}  <span style="color:red; margin-left:10px;">(remover)</span>`;
-    li.onclick = () => removerItem(index);
+
+    li.textContent = `${item.titulo} - R$ ${item.preco.toFixed(2)} `;
+
+    const remover = document.createElement("span");
+    remover.textContent = "(remover)";
+    remover.style.color = "red";
+    remover.style.marginLeft = "10px";
+    remover.style.cursor = "pointer";
+
+    remover.onclick = () => removerItem(index);
+
+    li.appendChild(remover);
+
     itensCarrinhoHtml.appendChild(li);
   });
+
   valorTotalHtml.textContent = total.toFixed(2);
 
   if (total > 100) {
