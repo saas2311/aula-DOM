@@ -8,6 +8,7 @@ body{
 
 main{
   gap: 50px;
+  display: flex;
   margin-top: 20px;
 }
 
@@ -63,4 +64,14 @@ button:hover{
 
 #btn-limpar:hover {
   background: #c82333;
+}
+
+.total-normal {
+  color: black;
+  font-weight: normal;
+}
+
+.total-alerta {
+  color: red;
+  font-weight: bold;
 }

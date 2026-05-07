@@ -72,11 +72,11 @@ function atualizarInterfaceCarrinho() {
   valorTotalHtml.textContent = total.toFixed(2);
 
   if (total > 100) {
-    valorTotalHtml.style.color = "red";
-    valorTotalHtml.style.fontWeight = "bold";
+    valorTotalHtml.classList.add("total-alerta");
+    valorTotalHtml.classList.remove("total-normal");
   } else {
-    valorTotalHtml.style.color = "black";
-    valorTotalHtml.style.fontWeight = "normal";
+    valorTotalHtml.classList.add("total-normal");
+    valorTotalHtml.classList.remove("total-alerta");
   }
 }
 
