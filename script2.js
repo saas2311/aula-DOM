@@ -15,7 +15,7 @@ const valorTotalHtml = document.getElementById("valor-total");
 function carregarCatalogo() {
   livros.forEach((livro) => {
     const div = document.createElement("div");
-    div.classList.add("livro-card");
+    div.classList.add("livro");
     div.innerHTML = `
         <h3>${livro.titulo}</h3>
         <p>R$ ${livro.preco.toFixed(2)}</p>
